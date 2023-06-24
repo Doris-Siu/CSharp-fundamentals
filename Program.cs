@@ -48,3 +48,19 @@ Console.WriteLine(flags[0]);
 Console.WriteLine(flags[1]);
 Console.WriteLine(flags[2]);
 
+
+//Enum
+var method = ShippingMethod.Express;
+Console.WriteLine((int)method);
+
+var methodId = 3;
+Console.WriteLine((ShippingMethod)methodId);
+
+//type convesion to string
+Console.WriteLine(method.ToString());
+
+//parse string into an enum
+var methodName = "Express";
+var shippingMethod = (ShippingMethod)Enum.Parse(typeof(ShippingMethod), methodName);
+
+Console.WriteLine(shippingMethod);
