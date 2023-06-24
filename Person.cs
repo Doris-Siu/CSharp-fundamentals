@@ -1,4 +1,5 @@
-﻿namespace CSharp_fundamentals
+﻿using System;
+namespace CSharp_fundamentals
 {
 	public class Person
 	{
