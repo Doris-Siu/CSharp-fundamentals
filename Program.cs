@@ -108,3 +108,46 @@ for (var i = 0; i < passwordLength; i++)
 var password = new string(buffer);
 
 Console.WriteLine(password);
+
+
+// arrays
+
+var odds = new int[] { 1, 5, 7, 11, 9, 3};
+
+// Length
+Console.WriteLine("Length: " + odds.Length);
+
+// IndexOf()
+var index = Array.IndexOf(odds, 9);
+Console.WriteLine("Index of 9: " + index);
+
+// Clear()
+Array.Clear(odds, 0, 2);
+
+Console.WriteLine("Effect of Clear(): ");
+foreach (var n in odds)
+    Console.Write(n);
+Console.WriteLine();
+
+// Copy()
+var anotherArr = new int[3];
+Array.Copy(odds, anotherArr, 3);
+Console.WriteLine("Effect of Copy(): ");
+foreach (var n in anotherArr)
+    Console.Write(n);
+Console.WriteLine();
+
+// Sort()
+Array.Sort(odds);
+Console.WriteLine("Effect of Sort(): ");
+foreach (var n in odds)
+    Console.Write(n);
+Console.WriteLine();
+
+
+// Reverse()
+Array.Reverse(odds);
+Console.WriteLine("Effect of Reverse(): ");
+foreach (var n in odds)
+    Console.Write(n);
+Console.WriteLine();
