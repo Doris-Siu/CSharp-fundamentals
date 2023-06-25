@@ -151,3 +151,43 @@ Console.WriteLine("Effect of Reverse(): ");
 foreach (var n in odds)
     Console.Write(n);
 Console.WriteLine();
+
+
+// List : generic type
+var integers = new List<int>() { 1, 2, 3, 4 };
+
+// add more elements
+integers.Add(1);
+integers.AddRange(new int[] { 5, 6, 7 });
+
+foreach (var n in integers)
+    Console.Write(n);
+Console.WriteLine();
+
+// IndexOf()
+Console.WriteLine("Index of 1: " + integers.IndexOf(1));
+Console.WriteLine("Last Index of 1: " + integers.LastIndexOf(1));
+
+// Count
+Console.WriteLine("Count: " + integers.Count);
+
+// Remove() : remove the 1st of that particular element
+// use a for loop to remove all particular elements, but not a foreach loop
+
+for (var i = 0; i < integers.Count; i++)
+{
+    if (integers[i] == 1)
+        integers.Remove(integers[i]);
+}
+
+foreach (var n in integers)
+    Console.Write(n);
+Console.WriteLine();
+
+// Clear()
+integers.Clear();
+Console.WriteLine("Count: " + integers.Count);
+
+
+
+
