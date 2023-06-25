@@ -64,3 +64,31 @@ var methodName = "Express";
 var shippingMethod = (ShippingMethod)Enum.Parse(typeof(ShippingMethod), methodName);
 
 Console.WriteLine(shippingMethod);
+
+//Condtional flow
+bool isGoldCustomer = true;
+
+//float price;
+//if (isGoldCustomer)
+//    price = 19.95f;
+//else
+//    price = 29.95f;
+
+
+//conditional operator
+float price = (isGoldCustomer) ? 19.95f : 29.95f;
+Console.WriteLine(price);
+
+//switch/case statements
+var season = Season.Autumn;
+
+switch (season) {
+    case Season.Autumn:
+    case Season.Summer:
+        Console.WriteLine("We've got promoted!");
+        break;
+
+    default:
+        Console.WriteLine("I don't know about that season!");
+        break;
+}
