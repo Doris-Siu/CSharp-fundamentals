@@ -277,5 +277,12 @@ float money = 29.95f;
 Console.WriteLine(money.ToString("C0"));
 
 
+// summarising long text
+var sentence = "This is a really really really really really really long text";
+var summary = StringUtility.SummarizeText(sentence, 30);
+Console.WriteLine(summary);
+
+
+
 
 
