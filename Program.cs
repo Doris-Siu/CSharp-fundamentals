@@ -236,3 +236,46 @@ Console.WriteLine("Subtract example: " + timeSpan.Subtract(TimeSpan.FromMinutes(
 Console.WriteLine("ToString: " + timeSpan.ToString());
 Console.WriteLine("ParseString: " + TimeSpan.Parse("01:02:03"));
 
+
+// Class string methods
+
+var fullName = "Doris Siu ";
+
+Console.WriteLine("Trim: '{0}'", fullName.Trim());
+Console.WriteLine("ToUpper: '{0}'", fullName.Trim().ToUpper());
+
+// splitting the full name
+// 1. IndexOf + Substring
+var id = fullName.IndexOf(' ');
+
+var firstName = fullName.Substring(0, id);
+var lastName = fullName.Substring(id + 1);
+Console.WriteLine("First Name: " + firstName);
+Console.WriteLine("Last Name: " + lastName);
+
+// 2. use Split
+var namesArr = fullName.Split(' ');
+
+Console.WriteLine("First Name: " + namesArr[0]);
+Console.WriteLine("Last Name: " + namesArr[1]);
+
+// Replace
+Console.WriteLine(fullName.Replace("Doris", "Mei"));
+
+
+// input invalid checking
+if (String.IsNullOrWhiteSpace(""))
+    Console.WriteLine("Invalid.");
+
+// convert str to numbers
+var str = "25";
+var age = Convert.ToByte(str);
+Console.WriteLine(age);
+
+//convert numbers to str
+float money = 29.95f;
+Console.WriteLine(money.ToString("C0"));
+
+
+
+
