@@ -1,6 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using System.Text;
 using CSharp_fundamentals;
 using CSharp_fundamentals.Math;
+
 
 Console.WriteLine("Hello, World!");
 
@@ -282,6 +284,14 @@ var sentence = "This is a really really really really really really long text";
 var summary = StringUtility.SummarizeText(sentence, 30);
 Console.WriteLine(summary);
 
+
+// StringBuilder Class
+var builder = new StringBuilder("Hello World");
+builder.Append('-', 10).AppendLine().Append("Header").AppendLine().Append('-', 10).Replace('-', '+').Remove(0, 10).Insert(0, new string('-', 10));
+
+Console.WriteLine(builder);
+
+Console.WriteLine("First char: " + builder[0]);
 
 
 
