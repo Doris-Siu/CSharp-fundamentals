@@ -294,5 +294,29 @@ Console.WriteLine(builder);
 Console.WriteLine("First char: " + builder[0]);
 
 
+// File (provide static methods), FileInfo (provide instance methods) Class
+// File Class
+var path = @"c:\somefile.jpg";
+
+if (File.Exists(path))
+{
+    File.Copy(@"c:\temp\myfile.jpg", @"d:\temp\myfile.jpg", true);
+    File.Delete(path);
+    var content = File.ReadAllText(path);
+}
+
+
+// FileInfo Class
+var fileInfo = new FileInfo(path);
+
+if (fileInfo.Exists)
+{
+    fileInfo.CopyTo("");
+    fileInfo.Delete();
+}
+
+
+
+
 
 
