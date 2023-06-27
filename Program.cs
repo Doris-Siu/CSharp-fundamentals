@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.Text;
+using System.IO;
 using CSharp_fundamentals;
 using CSharp_fundamentals.Math;
 
@@ -340,6 +341,15 @@ if (directoryInfo.Exists)
     directoryInfo.GetFiles();
     directoryInfo.GetDirectories();
 }
+
+
+// Path Class
+//var pathStr = @"C:\Projects\CSharpFundamentals\HelloWorld\HelloWorld.sln";
+var pathStr = @"/Users/dorissiu/Projects/CSharp-fundamentals/helloWorld/HelloWorld.sln";
+Console.WriteLine("Extension: " + Path.GetExtension(pathStr));
+Console.WriteLine("File Name: " + Path.GetFileName(pathStr));
+Console.WriteLine("File Name without extension: " + Path.GetFileNameWithoutExtension(pathStr));
+Console.WriteLine("Directory Name: " + Path.GetDirectoryName(pathStr));
 
 
 
