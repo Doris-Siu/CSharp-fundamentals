@@ -316,6 +316,35 @@ if (fileInfo.Exists)
 }
 
 
+// Directory, DirectoryInfo Class
+// Directory
+// Directory.CreateDirectory(@"c:\temp\folder1");
+
+if (Directory.Exists(@"c:\\Projects\\CSharp-fundamentals\"))
+    {
+    var files = Directory.GetFiles(@"c:\Projects\CSharp-fundamentals", "*.sln", SearchOption.AllDirectories);
+    foreach (var file in files)
+        Console.WriteLine(file);
+
+
+    var directories = Directory.GetDirectories(@"c:\Projects\CSharp-fundamentals", "*.*", SearchOption.AllDirectories);
+    foreach (var dir in directories)
+        Console.WriteLine(dir);
+}
+
+// DirectoryInfo
+var directoryInfo = new DirectoryInfo("...");
+
+if (directoryInfo.Exists)
+{
+    directoryInfo.GetFiles();
+    directoryInfo.GetDirectories();
+}
+
+
+
+
+
 
 
 
