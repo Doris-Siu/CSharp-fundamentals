@@ -351,6 +351,8 @@ Console.WriteLine("File Name: " + Path.GetFileName(pathStr));
 Console.WriteLine("File Name without extension: " + Path.GetFileNameWithoutExtension(pathStr));
 Console.WriteLine("Directory Name: " + Path.GetDirectoryName(pathStr));
 
+Loops.Exercise5();
+
 
 
 
