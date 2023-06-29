@@ -356,5 +356,3 @@ Console.WriteLine("Directory Name: " + Path.GetDirectoryName(pathStr));
 
 
 
-
-
